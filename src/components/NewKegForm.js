@@ -1,14 +1,51 @@
 import React from "react";
-import tapRoom from "./../img/tap.png"
-import tapRoom1 from './../img/Image3.jpg'
+import { v4 } from 'uuid';
+import PropTypes from 'prop-types';
 
-function Header(){
+
+function NewKegForm(props){
+  function handleNewKegFormSubmission(event) {
+    event.preventDefault();
+    props.onNewKegCreation({
+      name: event.target.name.value, 
+      brand: event.target.brand.value, 
+      price: event.target.price.value,
+      alcohol: event.target.alcohol.value, 
+      id: v4()
+    });
+  }
   return (
     <React.Fragment>
-      <img class="center" src = {tapRoom} /> <br></br>
-      <img class="center" src = {tapRoom1} />
+      <div className= "form-box">
+        <form onSubmit={handleNewKegFormSubmission}>
+          <div className= "field1">
+          <label>New Keg</label>
+          <input
+            type='text'
+            name='name'
+            placeholder='Beer Name' />
+          <input
+            type='text'
+            name='brand'
+            placeholder='brand' />
+          <input
+            type='currency'
+            name='price'
+            placeholder='Enter price' />
+          <input
+            type='text'
+            name='alcohol'
+            placeholder='Enter ABV' />
+          <button type='submit'>Add new Keg</button>
+          </div>
+        </form>
+      </div>
     </React.Fragment>
   );
 }
 
-export default Header;
+NewKegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
+
+export default NewKegForm;
