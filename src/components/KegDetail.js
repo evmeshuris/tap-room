@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from 'prop-types';
-import KegList from "./KegList";
-import Keg from "./Keg";
+// import PropTypes from 'prop-types';
+// import KegList from "./KegList";
+// import Keg from "./Keg";
 
 function KegDetail(props){
   return (
@@ -13,6 +13,7 @@ function KegDetail(props){
         <li>Alcohol %: {props.alcohol}</li>
         <li>Pints: {props.pint}</li>
       </ul>
+      {/* <button onClick= {() => sellPint(keg.id)}>Pint sold</button> */}
       <hr/>
     </React.Fragment>
   );
