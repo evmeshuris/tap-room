@@ -11,7 +11,8 @@ function NewKegForm(props){
       brand: event.target.brand.value, 
       price: event.target.price.value,
       alcohol: event.target.alcohol.value, 
-      id: v4()
+      id: v4(),
+      pint: event.target.pint.value
     });
   }
   return (
@@ -27,7 +28,7 @@ function NewKegForm(props){
           <input
             type='text'
             name='brand'
-            placeholder='brand' />
+            placeholder='Brand' />
           <input
             type='currency'
             name='price'
@@ -36,6 +37,10 @@ function NewKegForm(props){
             type='text'
             name='alcohol'
             placeholder='Enter % of Alcohol' />
+          <input
+            type='number'
+            name='pint'
+            placeholder='How many pints' />  
           <button type='submit'>Add new Keg</button>
           </div>
         </form>

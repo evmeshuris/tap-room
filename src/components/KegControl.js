@@ -11,6 +11,7 @@ class KegControl extends React.Component {
       mainKegList: []
     };
     this.handleClick = this.handleClick.bind(this); 
+    this.handlePintsChange = this.handlePintsChange.bind(this); //new code
   }
 
   handleClick() {
@@ -23,6 +24,12 @@ class KegControl extends React.Component {
     const newMainKegList = this.state.mainKegList.concat(newKeg);
     this.setState({mainKegList: newMainKegList,
                   formVisibleOnPage: false });
+  }
+  //new code
+  handlePintsChange(id) {
+    const updatedKeg = Object.assign({}, this.state.mainKegList[id], {pint: this.state.mainKegList[id].pint-1});
+    const updatedMainKegList = Object.assign({}, this.state.mainKegList, {[id]: updatedKeg});
+    this.setState({mainKegList: updatedMainKegList});
   }
 
   render(){
