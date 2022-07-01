@@ -25,7 +25,8 @@ The application has following functionality:_
 * _GitHub_
 
 ### <span style="color:#0ec2b8" id="diagram">Component Diagram</span>
-![Preview](src/img/bar-diagram.png)
+![Preview](./src/img/bar-diagram.png)
+<!-- /Users/evgeniya/Projects/tap-room/src/img/bar-diagram.png -->
 ### <span style="color:#0ec2b8" id="bugs">Known Bugs</span>
 
 _After selling a pint, kegBeerList doesn't update properly_
