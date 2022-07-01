@@ -45,7 +45,7 @@ _After selling a pint, kegBeerList doesn't update properly_
 
 ## <span style="color:#0ec2b8" id="license">License</span> 
 
-*This software is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license*
+*[MIT](LICENSE)*
 
 Copyright (c) 2022 **_Evgeniya Meshuris_**
 
