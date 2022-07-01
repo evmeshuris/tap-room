@@ -33,7 +33,7 @@ _After selling a pint, kegBeerList doesn't update properly_
 
 ## <span style="color:#0ec2b8" id="setup">Setup and Use</span>
 ### <span style="color:#0ec2b8" id="cloning">Cloning the project</span>
-1. _Navigate to my [TheBlueOysterBar-Redux repo](https://github.com/evmeshuris/tap-room.git) at https://github.com/evmeshuris/tap-room.git_ to view the project files and commits.
+1. _Navigate to my  https://github.com/evmeshuris/tap-room.git_ to view the project files and commits.
 2. _Click on the green button labeled `Code`_ to copy repository URL.
 3. _Clone the repository to your local machine_ by opening your machine terminal and using the command `git clone https://github.com/evmeshuris/tap-room.git`.
 
