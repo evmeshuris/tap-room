@@ -1,22 +1,28 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import KegList from "./KegList";
 // import Keg from "./Keg";
 
 function KegDetail(props){
+  const { keg } = props;
   return (
     <React.Fragment>
-      <h3>{props.name}'s Details</h3>
-      <ul>
-        <li>Brand: {props.brand}</li>
-        <li>Price ${props.price}</li>
-        <li>Alcohol %: {props.alcohol}</li>
-        <li>Pints: {props.pint}</li>
-      </ul>
-      {/* <button onClick= {() => sellPint(keg.id)}>Pint sold</button> */}
+      <h3>{keg.name}'s Details</h3>
+      <p>Brand: {keg.brand}</p>
+      <p>Price ${keg.price}</p>
+      <p>Alcohol %: {keg.alcohol}</p>
+      <p>Pints: {keg.pints}</p>
+
+      { keg.pints > 0 ? <button onClick= {props.removePint}>Pint Sold</button> : null}
       <hr/>
     </React.Fragment>
   );
 }
+KegDetail.propTypes = {
+  keg: PropTypes.object,
+  removePint: PropTypes.func
+};
 
 export default KegDetail;
+
+
